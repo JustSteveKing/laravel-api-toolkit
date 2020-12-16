@@ -44,10 +44,7 @@
         "laravel": {
             "providers": [
                 "JustSteveKing\\Laravel\\ApiToolkit\\ApiToolkitServiceProvider"
-            ],
-            "aliases": {
-                "ApiToolkit": "JustSteveKing\\Laravel\\ApiToolkit\\ApiToolkitFacade"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
