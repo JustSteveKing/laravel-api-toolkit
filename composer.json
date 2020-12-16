@@ -1,0 +1,30 @@
+{
+    "name": "juststeveking/laravel-api-toolkit",
+    "description": "A toolkit for creating APIs in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "developer",
+            "name": "Steve McDougall",
+            "email": "juststevemcd@gmail.com",
+            "homepage": "https://www.juststeveking.uk/"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "require-dev": {},
+    "autoload": {},
+    "autoload-dev": {},
+    "extra": {
+        "laravel": {
+            "providers": []
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
