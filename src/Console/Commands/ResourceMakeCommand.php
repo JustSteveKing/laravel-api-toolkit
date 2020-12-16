@@ -47,7 +47,7 @@ class ResourceMakeCommand extends Command
     {
         $this->comment("Creating Seeder for {$name}");
         $this->call("make:seeder", [
-            'name' => "{$name}Seeder"
+            'name' => sprintf(config('api-toolkit.seeder_name'), $name)
         ]);
     }
 
@@ -55,7 +55,7 @@ class ResourceMakeCommand extends Command
     {
         $this->comment("Creating Model Policy for {$name}");
         $this->call('make:policy', [
-            'name' => "{$name}Policy",
+            'name' => sprintf(config('api-toolkit.policy_name'), $name),
             '--model' => $name
         ]);
     }

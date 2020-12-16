@@ -58,8 +58,10 @@ class ResourceMakeCommandTest extends TestCase
         $command = $this->callCommand();
         $command->expectsOutput("Generating boilerplate for {$this->name}");
         $command->expectsOutput("Creating Seeder for {$this->name}");
+
+        $file = sprintf(config('api-toolkit.seeder_name'), $this->name);
         $this->assertTrue(
-            file_exists(database_path() . "/seeds/{$this->name}Seeder.php")
+            file_exists(database_path() . "/seeds/{$file}.php")
         );
     }
 
@@ -70,8 +72,10 @@ class ResourceMakeCommandTest extends TestCase
     {
         $command = $this->callCommand();
         $command->expectsOutput("Creating Model Policy for {$this->name}");
+        $file = sprintf(config('api-toolkit.policy_name'), $this->name);
+
         $this->assertTrue(
-            file_exists(app_path() . "/Policies/{$this->name}Policy.php")
+            file_exists(app_path() . "/Policies/{$file}.php")
         );
     }
 

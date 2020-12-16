@@ -8,6 +8,18 @@ return [
     'resource_name' => '%sResource',
 
     /**
+     * The pattern to use for Policy Naming.
+     * This will be used with sprintf().
+     */
+    'policy_name' => '%sPolicy',
+
+    /**
+     * The pattern to use for Seeder Naming.
+     * This will be used with sprintf().
+     */
+    'seeder_name' => '%sSeeder',
+
+    /**
      * The names of the Controllers to generate for each API Resource,
      * Please include any options you may want to include.
      * By default they are invokable controllers.
