@@ -3,7 +3,7 @@
 namespace JustSteveKing\Laravel\ApiToolkit\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use JustSteveKing\Laravel\ApiTookkit\ApiToolkitServiceProvider;
+use JustSteveKing\Laravel\ApiTookit\ApiToolkitServiceProvider;
 
 class TestCase extends Orchestra
 {
