@@ -3,7 +3,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![PHP Version](https://img.shields.io/packagist/php-v/juststeveking/php-sdk.svg?style=flat-square)](https://php.net)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/juststeveking/laravel-api-toolkit.svg?style=flat-square)](https://packagist.org/packages/juststeveking/laravel-api-toolkit)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/juststeveking/laravel-api-toolkit/run-tests?label=tests)](https://github.com/juststeveking/laravel-api-toolkit/actions?query=workflow%3ATests+branch%3Amain)
+![Tests](https://github.com/JustSteveKing/laravel-api-toolkit/workflows/Tests/badge.svg)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/JustSteveKing/laravel-api-toolkit/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/JustSteveKing/laravel-api-toolkit/?branch=main)
 [![Total Downloads](https://img.shields.io/packagist/dt/juststeveking/laravel-api-toolkit.svg?style=flat-square)](https://packagist.org/packages/juststeveking/laravel-api-toolkit)
 
