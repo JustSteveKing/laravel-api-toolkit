@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace JustSteveKing\Laravel\ApiTookkit;
+namespace JustSteveKing\Laravel\ApiToolkit;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,7 +20,9 @@ class ApiToolkitServiceProvider extends ServiceProvider
 
             // publish any resources
 
-            // register any commands
+            $this->commands([
+                \JustSteveKing\Laravel\ApiToolkit\Console\Commands\TestCommand::class
+            ]);
         }
     }
 
