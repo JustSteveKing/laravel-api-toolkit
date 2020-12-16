@@ -13,6 +13,22 @@ class ApiToolkitServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // publish stuff
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../config/api-toolkit.php' => config_path('api-toolkit.php')
+            ], 'config');
+
+            // publish any resources
+
+            // register any commands
+        }
+    }
+
+    public function register()
+    {
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/api-toolkit.php',
+            'api-toolkit'
+        );
     }
 }
