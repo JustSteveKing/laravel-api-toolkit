@@ -13,6 +13,10 @@ class ResourceMakeCommand extends Command
 
     public function handle()
     {
+        if (! is_string($this->argument('name'))) {
+            return;
+        }
+
         $name = Str::studly($this->argument('name'));
         $this->comment("Generating boilerplate for {$name}");
 
