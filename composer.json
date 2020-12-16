@@ -15,8 +15,16 @@
         "php": "^7.4|^8.0"
     },
     "require-dev": {},
-    "autoload": {},
-    "autoload-dev": {},
+    "autoload": {
+        "psr-4": {
+            "JustSteveKing\\Laravel\\ApiToolkit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JustSteveKing\\Laravel\\ApiToolkit\\Tests\\": "tests/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": []
