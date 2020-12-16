@@ -21,7 +21,8 @@ class ApiToolkitServiceProvider extends ServiceProvider
             // publish any resources
 
             $this->commands([
-                \JustSteveKing\Laravel\ApiToolkit\Console\Commands\TestCommand::class
+                \JustSteveKing\Laravel\ApiToolkit\Console\Commands\TestCommand::class,
+                \JustSteveKing\Laravel\ApiToolkit\Console\Commands\ResourceMakeCommand::class,
             ]);
         }
     }
