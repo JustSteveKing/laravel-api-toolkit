@@ -2,8 +2,8 @@
 
 namespace JustSteveKing\Laravel\ApiToolkit\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use JustSteveKing\Laravel\ApiToolkit\ApiToolkitServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            ApiToolkitServiceProvider::class
+            ApiToolkitServiceProvider::class,
         ];
     }
 

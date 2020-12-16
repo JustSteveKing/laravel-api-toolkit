@@ -2,8 +2,8 @@
 
 namespace JustSteveKing\Laravel\ApiToolkit\Console\Commands;
 
-use Illuminate\Support\Str;
 use Illuminate\Console\Command;
+use Illuminate\Support\Str;
 
 class ResourceMakeCommand extends Command
 {
@@ -30,7 +30,7 @@ class ResourceMakeCommand extends Command
         $this->comment("Creating Model and Migration for {$name}");
         $this->call("make:model", [
             'name' => $name,
-            '-m'
+            '-m',
         ]);
     }
 
@@ -39,7 +39,7 @@ class ResourceMakeCommand extends Command
         $this->comment("Creating Factory for {$name}");
         $this->call("make:factory", [
             'name' => "{$name}Factory",
-            '--model' => $name
+            '--model' => $name,
         ]);
     }
 
@@ -47,7 +47,7 @@ class ResourceMakeCommand extends Command
     {
         $this->comment("Creating Seeder for {$name}");
         $this->call("make:seeder", [
-            'name' => sprintf(config('api-toolkit.seeder_name'), $name)
+            'name' => sprintf(config('api-toolkit.seeder_name'), $name),
         ]);
     }
 
@@ -56,7 +56,7 @@ class ResourceMakeCommand extends Command
         $this->comment("Creating Model Policy for {$name}");
         $this->call('make:policy', [
             'name' => sprintf(config('api-toolkit.policy_name'), $name),
-            '--model' => $name
+            '--model' => $name,
         ]);
     }
 
@@ -65,7 +65,7 @@ class ResourceMakeCommand extends Command
         foreach (config('api-toolkit.form_requests') as $request) {
             $this->comment("Creating {$request} for model {$name}");
             $this->call('make:request', [
-                'name' => "Api\\{$name}\\{$request}"
+                'name' => "Api\\{$name}\\{$request}",
             ]);
         }
     }
@@ -74,7 +74,7 @@ class ResourceMakeCommand extends Command
     {
         $this->comment("Creating API Resource for {$name}");
         $this->call('make:resource', [
-            'name' => sprintf(config('api-toolkit.resource_name'), $name)
+            'name' => sprintf(config('api-toolkit.resource_name'), $name),
         ]);
     }
 
@@ -84,7 +84,7 @@ class ResourceMakeCommand extends Command
             $this->comment("Creating {$controller['name']} for model {$name}");
             $this->call('make:controller', [
                 'name' => "{$name}\\{$controller['name']}",
-                implode(' ', $controller['options'])
+                implode(' ', $controller['options']),
             ]);
         }
     }
