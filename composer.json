@@ -32,7 +32,7 @@
         }
     },
     "scripts": {
-        "test": "phpdbg -qrr ./vendor/bin/phpunit --coverage-html build/coverage-report -d memory_limit=512M --testdox",
+        "test": "vendor/bin/phpunit --testdox",
         "test-coverage": "@test --coverage-html coverage",
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
         "analyse": "vendor/bin/psalm"
