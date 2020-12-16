@@ -15,6 +15,12 @@
         "php": "^7.4|^8.0",
         "illuminate/support": "^8.19"
     },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.17",
+        "orchestra/testbench": "^6.7",
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.3"
+    },
     "autoload": {
         "psr-4": {
             "JustSteveKing\\Laravel\\ApiToolkit\\": "src/"
@@ -28,7 +34,8 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "@test --coverage-html coverage",
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "analyse": "vendor/bin/psalm"
     },
     "config": {
         "sort-packages": true
@@ -37,14 +44,12 @@
         "laravel": {
             "providers": [
                 "JustSteveKing\\Laravel\\ApiToolkit\\ApiToolkitServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "ApiToolkit": "JustSteveKing\\Laravel\\ApiToolkit\\ApiToolkitFacade"
+            }
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.17",
-        "orchestra/testbench": "^6.7",
-        "phpunit/phpunit": "^9.5"
-    }
+    "prefer-stable": true
 }

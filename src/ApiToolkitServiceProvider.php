@@ -15,7 +15,7 @@ class ApiToolkitServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/api-toolkit.php' => config_path('api-toolkit.php')
+                __DIR__ . '/../config/api-toolkit.php' => config_path('api-toolkit.php'),
             ], 'config');
 
             // publish any resources
