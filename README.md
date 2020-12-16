@@ -7,7 +7,7 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/JustSteveKing/laravel-api-toolkit/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/JustSteveKing/laravel-api-toolkit/?branch=main)
 [![Total Downloads](https://img.shields.io/packagist/dt/juststeveking/laravel-api-toolkit.svg?style=flat-square)](https://packagist.org/packages/juststeveking/laravel-api-toolkit)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+A toolkit for creating APIs in Laravel.
 
 ## Installation
 
