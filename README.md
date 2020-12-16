@@ -24,12 +24,73 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'resource_name' => '%sResource',
+    'policy_name' => '%sPolicy',
+    'seeder_name' => '%sSeeder',
+    'controllers' => [
+        [
+            'name' => 'IndexController',
+            'options' => [
+                '--invokable',
+            ]
+        ],
+        [
+            'name' => 'CreateController',
+            'options' => [
+                '--invokable',
+            ]
+        ],
+        [
+            'name' => 'ShowController',
+            'options' => [
+                '--invokable',
+            ]
+        ],
+        [
+            'name' => 'UpdateController',
+            'options' => [
+                '--invokable',
+            ]
+        ],
+        [
+            'name' => 'DeleteController',
+            'options' => [
+                '--invokable',
+            ]
+        ],
+    ],
+    'form_requests' => [
+        'CreateRequest',
+        'UpdateRequest',
+    ],
 ];
 ```
 
 ## Usage
 
+To get starteed using this, there is only one command you really need to worry about: `api-toolkit:resource`.
 
+The only option you need to pass it is the eloquent Model you wish to create and create the APi blueprint for.
+
+```bash
+php artisan api-toolkit:resource Post
+```
+
+The above command will generate:
+
+- `app/Models/Post.php`
+- `app/Policies/PostPolicy.php` - Class name can be altered in config
+- `app/Http/Resources/PostResource.php` - Class name can be altered in config
+- `app/Http/Requests/Api/Post/CreateRequest.php` - Class name can be altered in config
+- `app/Http/Requests/Api/Post/UpdateRequest.php` - Class name can be altered in config
+- `app/Http/Controllers/Post/IndexController.php` - Class name can be altered in config
+- `app/Http/Controllers/Post/CreateController.php` - Class name can be altered in config
+- `app/Http/Controllers/Post/ShowController.php` - Class name can be altered in config
+- `app/Http/Controllers/Post/UpdateController.php` - Class name can be altered in config
+- `app/Http/Controllers/Post/DeleteController.php` - Class name can be altered in config
+- `database/seeds/PostSeeder.php` - Class name can be altered in config
+- `database/factories/PostFactory.php`
+- `database/migrations/xxxx_xx_xx_xxxxxx_create_posts_table.php`
 
 ## Testing
 ```bash
