@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class ResourceMakeCommand extends Command
 {
-    public $signature = 'api-toolkit:resource {name : The name of the Model you want to generate}';
+    public $signature = 'api-toolkit:resource {name : The name of the Model you want to generate} {--Q|compact : Generate only a single controller class with api resouce methods}';
 
     public $description = 'Generate all the usual parts for an API Resource';
 
@@ -84,6 +84,15 @@ class ResourceMakeCommand extends Command
 
     protected function makeControllers(string $name): void
     {
+        if ($this->option('compact')) {
+            $this->comment("Creating {$name}Controller for model {$name}");
+            $this->call('make:controller', [
+                'name' => "{$name}Controller",
+                '--api' => true,
+            ]);
+            return;
+        }
+
         foreach (config('api-toolkit.controllers') as $controller) {
             $this->comment("Creating {$controller['name']} for model {$name}");
             $this->call('make:controller', [

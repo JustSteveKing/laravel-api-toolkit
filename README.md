@@ -95,6 +95,9 @@ The above command will generate:
 - `database/factories/PostFactory.php`
 - `database/migrations/xxxx_xx_xx_xxxxxx_create_posts_table.php`
 
+### Available Options
+- **--compact** : Generate only a single controller class with api resouce methods
+
 ## Testing
 ```bash
 composer test
