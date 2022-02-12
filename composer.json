@@ -13,11 +13,11 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "illuminate/support": "^8.19"
+        "illuminate/support": "^8.19|^9.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.17",
-        "orchestra/testbench": "^6.7",
+        "orchestra/testbench": "^6.7|^7.0",
         "phpunit/phpunit": "^9.5",
         "vimeo/psalm": "^4.3"
     },
@@ -38,7 +38,10 @@
         "analyse": "vendor/bin/psalm"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
     },
     "extra": {
         "laravel": {
