@@ -126,11 +126,11 @@ class ResourceMakeCommandTest extends TestCase
      */
     public function we_can_create_a_compact_controller()
     {
-        $command = $this->artisan("api-toolkit:resource {$this->name} --compact");
+        $command = $this->artisan("api-toolkit:resource Blog --compact");
 
-        $command->expectsOutput("Creating {$this->name}Controller for model {$this->name}");
+        $command->expectsOutput("Creating BlogController for model Blog");
         $this->assertTrue(
-            file_exists(app_path()."/Http/Controllers/{$this->name}Controller.php")
+            file_exists(app_path()."/Http/Controllers/BlogController.php")
         );
     }
 }
